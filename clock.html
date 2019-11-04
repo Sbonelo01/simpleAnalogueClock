@@ -1,0 +1,216 @@
+<!doctype HTML>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+
+	<title>clock</title>
+
+	<style type="text/css">
+
+		html {
+			font-weight: 900;
+		}
+/*
+		@keyframes moveLongHand {
+			from {
+				position: relative;
+				left: 116px;
+				top: -155px;
+			}
+			to {
+				position: relative;
+				left: 120px;
+				top: -155px;
+			}
+		}
+
+		#long-hand {
+			animation-duration: 60s;
+			width: 100px;
+			height: 100px;
+			animation-name: moveLongHand;
+		}
+
+		@keyframes moveShortHand {
+			from {
+				position: relative;
+				top: -153px;
+				left: 130px;
+			}
+			to {
+				position: relative;
+				top: -157px;
+				left: 130px;
+			}
+		}
+
+		#short-hand {
+			animation-duration: 12s;
+			width: 100px;
+			height: 100px;
+			animation-name: moveShortHand;
+		}
+*/	
+		#container {
+			border-radius: 360px !important;
+			height: 42% !important;
+			width: 42% !important;
+			box-shadow: 1px 2px 6px 4px;
+			text-shadow: 2px 2px 2px 2px;
+			color: lime;
+		}
+
+		.middle-dot {
+			position: relative;
+			left: 50%;
+			top: 147.5px;
+			color: red;
+		}
+
+		.one {
+			position: relative;
+			left: 70%;
+			top: 20px;
+		}
+
+		.two {
+			position: relative;
+			top: 46px;
+			left: 85%;
+		}
+
+		.three {
+			position: relative;
+			left: 90%;
+			top: 78px;
+		}
+
+		.four {
+			position: relative;
+			top: 100px;
+			left: 89%;
+		}
+
+		.five {
+			position: relative;
+			top: 120px;
+			left: 78%;
+		}
+
+		.six {
+			position: relative;
+			left: 50%;
+			top: 115px;
+		}
+
+		.seven {
+			position: relative;
+			top: 73px;
+			left: 25%;
+		}
+
+		.eight {
+			position: relative;
+			top: 9px;
+			left: 10%;
+		}
+
+		.nine {
+			position: relative;
+			top: -60px;
+			left: 10%;
+		}
+
+		.ten {
+			position: relative;
+			top: -130px;
+			left: 30px;
+		}
+
+		.eleven {
+			position: relative;
+			top: -200px;
+			left: 65px;
+		}
+
+		.twelve {
+			position: relative;
+			left: 50%;
+			top: -250px;
+		}
+
+		#long-hand {
+			position: relative;
+			left: 19.2%;
+			top: -155px;
+			transform: rotateY(360deg);
+		}
+
+		#short-hand {
+			position: relative;
+			top: -153px;
+			left: 21.5%;
+		}
+
+		.copytag {
+			position: relative;
+			left: 15%;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	
+	<div id="container">
+		<div class="middle-dot">
+			<p style="font-weight: bold;">.</p>
+		</div>
+			<p class="one">*</p>
+			<p class="two">*</p>
+			<p class="three">3</p>
+			<p class="four">*</p>
+			<p class="five">*</p>
+			<p class="six">6</p>
+			<p class="seven">*</p>
+			<p class="eight">*</p>
+			<p class="nine">9</p>
+			<p class="ten">*</p>
+			<p class="eleven">*</p>
+			<p class="twelve">12</p>
+	</div>
+
+	<div class="hands">
+		<span id="short-hand">/</span>
+		<span id="long-hand">|</span>
+	</div>
+
+	<p class="copytag">&copy;Sbonelo 2019</p>
+
+	<script type="text/javascript">
+		
+		var shortHand = document.getElementById('short-hand');
+		var longHand = document.getElementById('long-hand');
+		var clock = document.getElementById('container');
+		var oneSecond = 1000;
+		var oneMinute = 1000 * 60;
+
+		console.log(oneSecond);
+		console.log(oneMinute);
+
+		function moveShortHand(){
+			setInterval(oneSecond);
+		}
+
+		function moveLongHand(){
+			setInterval(oneMinute)
+		}
+
+	</script>
+
+</body>
+
+</html>
